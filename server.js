@@ -23,6 +23,7 @@ app.use(function(req, res, next) {
 });
 
 app.post('/', function(req, res) {
+  res.statusCode = 200;
   console.log(req.body);
   messages.push(req.body);
   res.json(true);
